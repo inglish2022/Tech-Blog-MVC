@@ -95,6 +95,7 @@ router.post('/', (req, res) => {
         }
     
         req.session.save(() => {
+          //declare session variables
           req.session.userId = dbUserData.id;
           req.session.username = dbUserData.username;
           req.session.loggedIn = true;
