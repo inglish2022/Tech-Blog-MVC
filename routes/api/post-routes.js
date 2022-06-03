@@ -35,13 +35,13 @@ router.get('/', (req, res) => {
 
 
 
-// get all users
+// get all users id
 router.get('/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'title', 'content', 'dateCreated', 'user_id'],
         include: [
             {
                 model: User,
