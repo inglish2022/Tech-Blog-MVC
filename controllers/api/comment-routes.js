@@ -12,10 +12,10 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Comment.findAll({
-            where: {
-                id: req.params.id
-            }
-        })
+        where: {
+            id: req.params.id
+        }
+    })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);
@@ -24,13 +24,17 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    Comment.create({ ...req.body, user_id: req.session.userId })
-        .then(newComment => {
-            res.json(newComment);
-        })
+    //check the session
+    Comment.create({
+        ...req.body,
+        user_id: req.session.userId
+    })
+        .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
-            res.status(500).json(err);
+            console.log(err);
+            res.status(400).json(err);
         });
+
 });
 
 
