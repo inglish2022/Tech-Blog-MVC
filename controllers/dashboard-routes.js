@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/',  withAuth, (req, res) => {
     Post.findAll({
             where: {
-                user_id: req.session.user_id
+                user_id: req.session.userId
             },
             attributes: ['id', 'title', 'content', 'created_at'],
             include: [{
@@ -68,7 +68,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         });
 })
 router.get('/new', (req, res) => {
-    res.render('new-post');
+    res.render('add-post');
 });
 
 

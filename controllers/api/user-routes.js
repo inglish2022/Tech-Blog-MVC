@@ -55,6 +55,7 @@ router.get('/:id', (req, res) => {
 
 // POST /api/users
 router.post('/', (req, res) => {
+  console.log('creating user');
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -64,7 +65,7 @@ router.post('/', (req, res) => {
           req.session.save(()  =>  {
             req.session.userId = dbUserData.id;
             req.session.username = dbUserData.username;
-            req.session.logIn = true;
+            req.session.loggedIn = true;
 
             res.json(dbUserData);
           });
