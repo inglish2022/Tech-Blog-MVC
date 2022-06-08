@@ -18,4 +18,4 @@ async function editPostHandler(event) {
         .catch(err => console.log(err))
   }
   
-  document.querySelector('.edit-post-form').addEventListener('submit', editPostHandler);
+  document.querySelector('#edit-post-form').addEventListener('submit', editPostHandler);

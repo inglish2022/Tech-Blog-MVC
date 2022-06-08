@@ -13,4 +13,4 @@ const postId = document.getElementById('post-id')
 }
   
   
-  document.querySelector('.delete-post-btn').addEventListener('click', deletePostHandler);
+  document.querySelector('#delete-post-btn').addEventListener('click', deletePostHandler);
