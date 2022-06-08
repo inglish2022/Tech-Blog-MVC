@@ -1,4 +1,4 @@
-const signupFormHandler = async function (event) {
+async function signupFormHandler(event) {
     event.preventDefault();
     console.log('hello')
     const username = document.querySelector('#username-login').value.trim();
@@ -7,7 +7,7 @@ const signupFormHandler = async function (event) {
     console.log(username, email, password)
     if (username && email && password) {
         console.log('signup error')
-        fetch('/api/user', {
+        const response = await fetch('/api/user', {
             method: 'post',
             body: JSON.stringify({
                 username,
@@ -15,11 +15,17 @@ const signupFormHandler = async function (event) {
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
-        })
-            .then(function () {
-                document.location.replace('/dashboard');
-            })
-            .catch(err => console.log(err));
+        });
+
+        if (response.ok)  {
+            document.location.replace('/dashboard');
+        } else {
+            alert(response.statusText);
+        }
+            // .then(function () {
+            //     document.location.replace('/dashboard');
+            // })
+            // .catch(err => console.log(err));
 
     };
 
