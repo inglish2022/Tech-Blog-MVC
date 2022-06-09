@@ -11,7 +11,12 @@ router.get('/',  withAuth, (req, res) => {
             where: {
                 user_id: req.session.userId
             },
-            attributes: ['id', 'title', 'content', 'created_at'],
+            attributes: [
+                'id',
+                'title',
+                'content',
+                'created_at'
+            ],
             include: [{
                     model: Comment,
                     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
@@ -40,7 +45,12 @@ router.get('/edit/:id', withAuth, (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: ['id', 'title', 'content', 'created_at'],
+            attributes: [
+                'id',
+                'title',
+                'content',
+                'created_at'
+            ],
             include: [{
                     model: User,
                     attributes: ['username']
@@ -72,7 +82,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 
 router.get('/new', (req, res) => {
-    res.render('add-post');
+    res.render('post-info');
 });
 
 

@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
     });
 
 
-// POST /api/users
+// POST /api/user
 router.post('/', (req, res) => {
   console.log('creating user');
     User.create({
