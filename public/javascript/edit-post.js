@@ -4,7 +4,7 @@ async function editPostHandler(event) {
     const body = document.getElementById('post-body');
     const post_id = document.getElementById('post_id')
 
-    fetch("/api/post/" + post_id.value, {
+    const response = await fetch("/api/post/" + post_id.value, {
         method: "PUT", 
         body: JSON.stringify({
             title: title.value,
@@ -12,10 +12,12 @@ async function editPostHandler(event) {
         }),
         headers: { "Content-Type": "application/json"}
     })
-        .then(function() {
+        if (response.ok) {
             document.location.replace("/dashboard");
-        })
-        .catch(err => console.log(err))
+        } else {
+            alert(response.statusText)
+        }
+      
   }
   
   document.querySelector('#edit-post-form').addEventListener('submit', editPostHandler);
