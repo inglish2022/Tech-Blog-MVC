@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  {{!-- <div class="wrapper">
     <header class="hero">
         <div>
             <nav class= "nav">
@@ -23,7 +23,24 @@
                 </nav> 
         </div>
       <h1 class="app-title"><i class="fab"></i>The Tech Blog</h1>
-    </header>
+    </header> --}}
+
+ <div class="wrapper">
+    <header>
+      <h1>
+        <h1 class="app-title">
+          <a href="/">The Tech Blog</a></h1>
+        {{!-- <a href="/">Just Tech News</a> --}}
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>   
 
     <main>
       {{{ body }}}
