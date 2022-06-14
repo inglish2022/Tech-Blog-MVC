@@ -145,14 +145,7 @@ article {
   list-style: none;
 }
 
-/* .list-item {
-  margin-bottom: 10px;
-  padding: 1.5%;
-  border-radius: var(--border-radius);
-  background-color: var(--light-dark);
-  color: var(--primary);
-  text-decoration: none;
-} */
+
 
 .list-item:hover {
   background-color: var(--dark);
