@@ -100,6 +100,13 @@ li {
   margin-bottom: 2%;
   line-height: 150%;
 border:white;
+padding: 10;
+}
+
+article {
+  padding: 40px;
+  margin:auto;
+  border: double;
 }
 
 .title  {
