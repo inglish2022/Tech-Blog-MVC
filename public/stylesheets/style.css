@@ -160,7 +160,7 @@ border:white;
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color:azure;
 }
 
 .comment .meta {
