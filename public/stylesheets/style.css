@@ -4,7 +4,7 @@
 
 body,
 html {
-  background-color: lightseagreen;
+  background-color: rgb(24, 125, 120);
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -107,6 +107,7 @@ article {
   padding: 40px;
   margin:auto;
   border: double;
+  background-color: lightseagreen;
 }
 
 .title  {
@@ -160,7 +161,7 @@ article {
 }
 
 .comment:nth-child(odd) {
-  background-color:azure;
+  background-color: lightseagreen;
 }
 
 .comment .meta {
