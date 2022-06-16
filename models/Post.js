@@ -21,10 +21,10 @@ Post.init  (
             type: DataTypes.STRING,
             allowNull: false,
            },
-          createdAt:  {
-            field: 'created_at',
-            type: Sequelize.DATE,
-          },
+          // createdAt:  {
+          //   field: 'created_at',
+          //   type: Sequelize.DATE,
+          // },
           user_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -38,6 +38,7 @@ Post.init  (
     sequelize,
     freezeTableName: true,
     underscored: true,
+    timestamps: true,
     modelName: 'post'
 }
 );
