@@ -53,6 +53,13 @@ button:hover {
   box-shadow: 2px 2px var(--dark);
 }
 
+nav  {
+  border: double;
+  background-color: lightseagreen;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px black;
+}
+
 
 
 
