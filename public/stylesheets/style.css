@@ -36,8 +36,8 @@ a:hover {
   color: whitesmoke;
 }
 
-btn {
-  background-color: rgba(69, 175, 138, 0.503);
+.btn {
+  background-color: lightseagreen;
   border: 0;
   padding: 6px 5px;
   color: white;
@@ -45,6 +45,8 @@ btn {
   transition: background-color .1s;
   cursor: pointer;
   border-radius: 5px;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px black;
 }
 
 button:hover {
@@ -55,6 +57,12 @@ button:hover {
 
 nav  {
   border: double;
+  background-color: lightseagreen;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px black;
+}
+
+.login-link  {
   background-color: lightseagreen;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px black;
