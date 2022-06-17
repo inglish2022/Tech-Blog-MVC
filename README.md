@@ -14,8 +14,11 @@ A CMS style blog similar to a Wordpress site, where various different users can 
 
 ## Installation
 
+Link to app:
+https://nameless-hollows-41057.herokuapp.com/
+
 ## Usage
-![Video of application](./public/images/TechBlogMVC.gif)
+![Video of application](./public/images/Screenshot99.png)
 
 Link to view Demo here: 
 https://drive.google.com/file/d/1xF7-wnCjJsslAnVHg3oqbzSvtoi3S0Wv/view
@@ -25,6 +28,8 @@ https://drive.google.com/file/d/1xF7-wnCjJsslAnVHg3oqbzSvtoi3S0Wv/view
 Inglish Foust
 
 ## Respository Link
+
+https://github.com/inglish2022/Tech-Blog-MVC
 
  
 
